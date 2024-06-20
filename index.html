@@ -5,29 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milana</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <a href="#about">Про мене</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#video">Відео</a>
-            <a href="#achievements">Досягнення</a>
-            <a href="#news">Новини</a>
-            <a href="#contacts">Контакти</a>
-            <a href="#blog">Блог</a>
-        </nav>
+        <div class="header-nav">
+            <a href="#" class="header-logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <a href="#about">Про мене</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#video">Відео</a>
+                <a href="#achievements">Досягнення</a>
+                <a href="#news">Новини</a>
+                <a href="#contacts">Контакти</a>
+                <a href="#blog">Блог</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="https://www.instagram.com/miss_milana_balitckaya?igsh=MTJwYjc0NDhhODA0Ng%3D%3D">
+                    <img src="images/instagram.png" alt="instagram">
+                    miss_milana_balitckaya
+                </a>
+                <a href="tel:+380671993903">
+                    <img src="images/call.png" alt="call">
+                    +38 (067) 199 39 03
+                </a>
+            </div>
+            <div class="humb">
+                <div class="bar-wrap"><span class="bar"></span></div>
+                <div class="bar-wrap"><span class="bar"></span></div>
+                <div class="bar-wrap"><span class="bar"></span></div>
+            </div>
+        </div>
         <div class="header-text">
-            <h1>Ім'я Дівчинки</h1>
-            <h2>Коротке представлення про що дана сторінка</h2>
+            <h1>Мілана Балицька</h1>
+            <h2>моє завдання, своє світло зробити яскравішим</h2>
         </div>
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="about">
             <h2>Про мене</h2>
             <p>Привіт! Мене звати Ім'я Дівчинки, мені 10 років, і я люблю брати участь у фотосесіях, виставах та
                 зйомках. Я
@@ -38,10 +59,167 @@
 
         <section id="gallery">
             <h2>Галерея</h2>
-            <p>Фотографії з фотосесій, виступів та зйомок:</p>
-            <img src="photo1.jpg" alt="Фотосесія 1" width="200">
-            <img src="photo2.jpg" alt="Фотосесія 2" width="200">
-            <img src="photo3.jpg" alt="Фотосесія 3" width="200">
+            <div class="gallery">
+                <article style="--bg-img:url(../images/gallery/1.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/1.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/2.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/2.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/3.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/3.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/4.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/4.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/5.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/5.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/6.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/6.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/7.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/7.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/8.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/8.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/9.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/9.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+
+                <article style="--bg-img:url(../images/gallery/10.jpg)">
+                    <button type="button" aria-label="open">
+                        <img src="images/gallery/10.jpg" alt="photo">
+                    </button>
+                    <div>
+                        <h2>Назва фото</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem fugiat debitis voluptate et
+                            obcaecati ut,
+                            veritatis ducimus nobis, nisi odit modi dolorem?</p>
+                        <button type="button" data-close="" aria-label="close" tabindex="-1">&#10005;</button>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="video">
@@ -62,11 +240,6 @@
         <section id="news">
             <h2>Новини</h2>
             <p>Останні новини про участь у конкурсах, виставах та зйомках:</p>
-            <ul>
-                <li>Новина 1</li>
-                <li>Новина 2</li>
-                <li>Новина 3</li>
-            </ul>
         </section>
 
         <section id="contacts">
@@ -79,11 +252,6 @@
         <section id="blog">
             <h2>Блог</h2>
             <p>Записи про улюблені книги, фільми, захоплення та інші цікаві події:</p>
-            <ul>
-                <li>Блог 1</li>
-                <li>Блог 2</li>
-                <li>Блог 3</li>
-            </ul>
         </section>
 
     </main>
@@ -93,6 +261,8 @@
     <footer>
         <p>&copy; 2024 Milana. Всі права захищено.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
