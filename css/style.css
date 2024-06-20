@@ -12,7 +12,6 @@ body {
   font-family: 'Exo 2', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
   font-size: 20px;
   overflow-x: hidden;
   color: #625772;
@@ -21,22 +20,21 @@ body {
 }
 
 header {
-  background-color: #ffe2e1;
+  /* background-color: #ffe2e1; */
   background-size: cover;
-  height: 80vh;
+  height: 150px;
   text-align: center;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .header-nav {
-  background-color: #fff;
+  background-color: #ffe2e1;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 10px 50px;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,7 +71,7 @@ nav a,
   text-decoration: none;
   color: #625772;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1rem;
   position: relative;
 }
 
@@ -116,14 +114,14 @@ nav a:hover:before,
 }
 
 .header-text h1 {
-  font-size: 50px;
+  font-size: 2.5rem;
   color: #625772;
   text-transform: uppercase;
   font-weight: 100;
 }
 
 .header-text h2 {
-  font-size: 40px;
+  font-size: 2rem;
   color: #625772;
   text-transform: uppercase;
   font-weight: 200;
@@ -172,9 +170,9 @@ header .humb {
 main {
   display: grid;
   gap: 40px;
-  padding: 50px;
+  padding: 210px 50px 50px;
   background-image: url(../images/back.png);
-  background-repeat: no-repeat;
+  background-size: 120%;
 }
 
 section {
@@ -190,7 +188,7 @@ section:nth-of-type(odd) {
 }
 
 section h2 {
-  font-size: 30px;
+  font-size: 1.6rem;
   color: #625772;
   text-transform: uppercase;
   font-weight: 200;
@@ -219,17 +217,13 @@ footer {
 }
 
 .about {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.about h2 {
-  font-size: 35px;
-}
-
 .about p {
-  font-size: 25px;
-  line-height: 45px;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
 }
 img {
   max-width: 100%;
@@ -293,10 +287,12 @@ img {
   cursor: pointer;
 }
 .gallery img {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out 0s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  padding: 10px;
 }
 
 .gallery > article > div {
@@ -305,22 +301,27 @@ img {
   right: 0;
   width: calc((var(--_size) + var(--_gap)) * 2);
   height: calc((var(--_size) + var(--_gap)) * 2);
-  background-color: white;
-  color: #555;
+  background-color: #ffe2e1;
+  color: #625772;
   padding: 2rem;
   transition: 500ms ease-in-out;
   opacity: 0;
   translate: var(--_translate-bio);
   z-index: 1;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .gallery > article > div > h2 {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 .gallery > article > div > p {
   margin-top: 20px;
-  font-size: 18px;
-  opacity: 0.8;
+  font-size: 1.3rem;
+  opacity: 1.5rem;
   overflow-y: auto;
 }
 .gallery > article > div > button {
@@ -377,8 +378,8 @@ img {
 }
 
 @media (max-width: 1024px) {
-  header {
-    height: 450px;
+  body {
+    font-size: 16px;
   }
   header .humb {
     display: block;
@@ -398,26 +399,20 @@ img {
     height: 100vh;
   }
   nav a {
-    margin: 12px 10px;
-  }
-  .header-text {
-    background-image: none;
-  }
-  .header-text h1 {
-    font-size: 35px;
-    margin: 170px 0 0;
-  }
-  .header-text h2 {
-    font-size: 20px;
+    display: inline-block;
+    margin: 12px auto;
   }
 }
 
 @media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
   .header-logo img {
     width: 70px;
   }
   header.active nav {
-    top: 41px;
+    top: 90px;
   }
   .header-nav {
     padding: 10px 15px;
@@ -427,6 +422,10 @@ img {
   }
   .header-contacts a {
     font-size: 15px;
+  }
+  main {
+    padding: 20px;
+    background-size: auto;
   }
 }
 
