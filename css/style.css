@@ -19,6 +19,10 @@ body {
   font-weight: 300;
 }
 
+.text-left {
+  text-align: left;
+}
+
 header {
   /* background-color: #ffe2e1; */
   background-size: cover;
@@ -210,6 +214,14 @@ section h2::after {
   background-color: #625772;
 }
 
+section ul {
+  margin-left: 50px;
+}
+
+section p {
+  margin-bottom: 30px;
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -233,148 +245,129 @@ img {
 /* gallery */
 
 .gallery {
-  --_size: 35vw;
-  --_grid-cols: repeat(2, 1fr);
-  --_gap: 5px;
-  --_translate-img: 0 calc(var(--_size) * 3 * -1);
-  --_translate-bio: 0 calc(var(--_size) * 3);
-  --_hover-opacity: 0.2;
-  --_img-offset: calc(var(--_size) / 4);
-  --_bio-top: 50%;
-  width: 100%;
-  max-width: fit-content;
   display: grid;
-  grid-template-columns: var(--_grid-cols);
-  gap: var(--_gap);
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
-@media (min-width: 600px) {
-  .gallery {
-    --_size: 20vw;
-    --_grid-cols: repeat(4, 1fr);
-    --_translate-bio: calc(var(--_size) * 3) 0;
-    --_bio-top: 0;
-  }
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.gallery button {
-  -webkit-appearance: none;
-  border-radius: 0;
-  text-align: inherit;
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
-  outline: none;
-  border: none;
-}
-
-.gallery > article {
-  height: var(--_size);
-  aspect-ratio: 1;
-  background-image: var(--bg-img);
-  background-position: center;
-  background-size: 0%;
-  background-repeat: no-repeat;
-}
-.gallery > article > button {
+.gallery > div {
+  display: inline-block;
   width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-.gallery img {
-  width: 95%;
-  height: 95%;
-  object-fit: cover;
-  transition: opacity 500ms ease-in-out 0s;
+  height: 20vw;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
   padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.gallery > article > div {
-  position: absolute;
-  top: var(--_bio-top);
-  right: 0;
-  width: calc((var(--_size) + var(--_gap)) * 2);
-  height: calc((var(--_size) + var(--_gap)) * 2);
-  background-color: #ffe2e1;
-  color: #625772;
-  padding: 2rem;
-  transition: 500ms ease-in-out;
-  opacity: 0;
-  translate: var(--_translate-bio);
+.gal-img {
+  transition: 0.2s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+  height: 19vw;
+}
+
+.gal-img:hover {
+  transform: scale(1.3);
   z-index: 1;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 5;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal img {
+  margin: 0 auto;
+  height: 75vh;
+}
+
+/* Video */
+
+.video {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.video-item {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-}
-
-.gallery > article > div > h2 {
-  font-size: 1.3rem;
-}
-.gallery > article > div > p {
-  margin-top: 20px;
-  font-size: 1.3rem;
-  opacity: 1.5rem;
-  overflow-y: auto;
-}
-.gallery > article > div > button {
-  border: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 2;
   cursor: pointer;
-  transition: rotate 300ms;
+  transition: 0.2s ease-in-out;
 }
 
-.gallery > article > div > button:focus-visible,
-.gallery > article > div > button:hover {
-  rotate: 90deg;
+.video-item img {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 10vw;
+  transition: 0.2s ease-in-out;
 }
 
-.gallery > article::before {
-  content: '';
+.video-item:hover img {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.play-button {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(98, 87, 114);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
   position: absolute;
-  inset: var(--_img-offset);
-  width: calc((var(--_size) + var(--_gap)) * 1.5);
-  height: calc((var(--_size) + var(--_gap)) * 1.5);
-  aspect-ratio: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  opacity: 0;
-  translate: var(--_translate-img);
-  transition: 500ms ease-in-out;
-  background-image: inherit;
 }
 
-.gallery:has(article > button:focus-within) > article img {
-  opacity: var(--_hover-opacity);
+.play-button:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  background: #ffe2e1;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
 }
 
-.gallery > article:focus-within::before {
-  translate: 0;
-  opacity: 1;
+.video-item:hover .play-button:before,
+.play-button:hover:before {
+  width: 100%;
+  height: 100%;
 }
 
-.gallery article:focus-within > div {
-  opacity: 1;
-  translate: 0;
-}
-
-.gallery:has(button[data-close]:focus-within) > article::before {
-  translate: var(--_translate-img);
-}
-.gallery:has(button[data-close]:focus-within) > article > div {
-  translate: var(--_translate-bio);
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 25px solid rgb(98, 87, 114);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-left: 7px;
+  z-index: 2;
 }
 
 @media (max-width: 1024px) {
@@ -402,11 +395,17 @@ img {
     display: inline-block;
     margin: 12px auto;
   }
+  .modal img {
+    height: 500px;
+  }
 }
 
 @media (max-width: 700px) {
   body {
     font-size: 14px;
+  }
+  section {
+    margin: 0 15px;
   }
   .header-logo img {
     width: 70px;
@@ -424,8 +423,25 @@ img {
     font-size: 15px;
   }
   main {
-    padding: 20px;
+    padding: 130px 20px 20px;
     background-size: auto;
+    gap: 15px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery > div {
+    height: 32vw;
+  }
+  .gal-img {
+    height: 28vw;
+  }
+
+  .video {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .video-item img {
+    height: 40vw;
   }
 }
 
